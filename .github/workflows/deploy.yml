@@ -13,7 +13,7 @@ jobs:
 
       - name: Zip artifact
         run: |
-          zip -r  zip -r artifact.zip . -x '.git/*' '.github/*' '*.md'
+          zip -r artifact.zip app/ scripts/ appspec.yml requirements.txt
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
